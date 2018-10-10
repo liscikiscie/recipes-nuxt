@@ -1,30 +1,39 @@
 <template>
   <section class="recipes">
-    <article>
-      <div>
-        <h1>Title</h1>
-        <p>Some nice preview text</p>
-      </div>
-    </article>
+    <Recipe
+      thumbnail="https://amp.businessinsider.com/images/5a7dc169d03072af008b4bf2-750-562.jpg"
+      title="Delicious biscuits"
+      previewText="Awesome cookie"
+    />
+
+    <Recipe
+      thumbnail="https://www.rd.com/wp-content/uploads/2018/04/9-Foods-You-Should-Never-Eat-Before-Bed-760x506.jpg"
+      title="Delicious Pizza"
+      previewText="Awesome Pizza!!"
+    />
   </section>
 </template>
 
 <script>
+  import Recipe from '@/components/Recipe.vue';
+
   export default {
-    name: 'index'
+    name: 'index',
+    components: {
+      Recipe
+    }
   }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
   .recipes {
-
-    .recipe {
-      box-sizing: border-box;
-      width: 280px;
-      padding: 8px;
-      border: 1px solid #ccc;
-      box-shadow: 0 2px 2px #aaa;
-    }
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
   }
+
+
+
 
 </style>
