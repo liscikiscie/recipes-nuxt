@@ -1,6 +1,6 @@
-# recipes
-
-> My awesome recipe book app
+Very basic Nuxt.js application
+- server-side rendering
+- files configuration
 
 ## Build Setup
 
