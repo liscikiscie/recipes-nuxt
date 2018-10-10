@@ -1,19 +1,26 @@
 <template>
-  <article class="recipe">
-    <div class="thumbnail" :style="{backgroundImage: 'url(' + thumbnail +')'}"></div>
-    <h1>{{ title }}</h1>
-    <p>{{ previewText }}</p>
-  </article>
+  <nuxt-link :to="'/recipes/' + id">
+    <article class="recipe">
+      <div class="thumbnail" :style="{backgroundImage: 'url(' + thumbnail +')'}"></div>
+      <h1>{{ title }}</h1>
+      <p>{{ previewText }}</p>
+    </article>
+  </nuxt-link>
 </template>
 
 <script>
   export default {
     name: 'Recipe',
-    props: [ 'thumbnail', 'title', 'previewText' ]
+    props: [ 'thumbnail', 'title', 'previewText', 'id' ]
   }
 </script>
 
 <style scoped>
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
   .recipe {
     box-sizing: border-box;
     width: 280px;
